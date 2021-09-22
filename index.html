@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Declare War(modified)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <button class="button" id="shuffle" onclick="shuffleDeck()">New Game</button>
+
+    <div class="parent">
+        <div class="child" id="child1">
+            <div id="compName" style="align-self: center">Computer</div>
+            <div id="playerName" style="align-self: center">Player</div>
+        </div>
+        <div class="child" id="child2">
+            <div class="cards" id="computerDeck" style="align-self: center"></div>
+            <div class="cards" id="playerDeck" style="align-self: center"></div>
+        </div>
+        <div class="child" id="child3">
+            <button class="button" id="draw" onclick="drawCard()">Draw Card</button>
+        </div>
+        <div class="child" id="child4">
+            <div class="cards" id="compCardDrawn" style="align-self: center"></div>
+            <div class="cards" id="playerCardDrawn" style="align-self: center"></div>
+        </div>
+        <div class="child" id="child5">
+            <div id="compScore" style="align-self: center">#</div>
+            <div id="score" style="align-self: center">SCORE</div>
+            <div id="playerScore" style="align-self: center">#</div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modalcontent" id="modalcontent">
+            <h1 class="modalheader"></h1>
+            <button class="button" id="restart" onclick="window.location.href=window.location.href">Close</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

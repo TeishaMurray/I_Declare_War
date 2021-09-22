@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.parent {
+    display: grid;
+    margin: 0px;
+    background-image: url("eyeballGraffitti.jpeg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    border: solid black;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 3vw
+}
+
+#child1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+#compName{
+    border: solid black 4px;
+    box-shadow: 5px 5px #362629;
+    border-radius: .45em;
+    width: auto;
+    height: auto;
+    font-size: 2vw;
+    font-family: "Permanent Marker", cursive;
+    font-weight: bolder;
+    text-align: center
+}
+
+#playerName{
+    border: solid black 4px;
+    box-shadow: 5px 5px #362629;
+    border-radius: .45em;
+    width: auto;
+    height: auto;
+    font-size: 2vw;
+    font-family: "Permanent Marker", cursive;
+    font-weight: bolder;
+    text-align: center
+}
+
+#child2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.cards {
+    border: solid black 5px;
+    box-shadow: 10px 10px #362629;
+    border-radius: .25em;
+    width: 12vw;
+    height: 38vh;
+    font-size: 12vw;
+}
+
+
+#computerDeck {
+    background-image: url("deckCover.jpeg");
+    width: 12vw;
+    height: 38vh;
+    opacity: 0.65;
+}
+
+#playerDeck {
+    background-image: url("deckCover.jpeg");
+    width: 12vw;
+    height: 38vh;
+    opacity: 0.65;  
+}
+
+#compCardDrawn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Permanent Marker", cursive;
+    text-rendering: optimizeLegibility;
+}
+
+#playerCardDrawn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Permanent Marker", cursive;
+    text-rendering: optimizeLegibility;
+}
+
+#child3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    outline: none;
+    margin: 0;
+    border: 0;
+    border-radius: .25em;
+    background: inherit;
+    cursor: pointer;
+    padding: .4em .8em;
+    text-rendering: optimizeLegibility;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 300;
+    color: inherit;
+    box-shadow: 0 .2em #888;
+    -webkit-transform: translateY(-.2em);
+    -moz-transform: translateY(-.2em);
+    transform: translateY(-.2em)
+}
+
+.button:hover,
+.button.hover{
+    background: rgb(245, 244, 244)
+}
+
+.button:active,
+.button.active{
+    box-shadow: none;
+    background: #e0e0e0;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0)
+}
+
+#shuffle {
+    font-size: 1.5vw;
+    font-family: "Permanent Marker", cursive;
+    font-weight: bold
+}
+
+#deal {
+    font-size: 1vw;
+    font-family: "Permanent Marker", cursive;
+    font-weight: bold
+}
+
+#draw {
+    display: none;
+    font-size: 2vw;
+    font-family: "Permanent Marker", cursive;
+    font-weight: bold
+}
+
+#reset {
+    font-size: 1vw;
+    font-family: "Permanent Marker", cursive;
+    font-weight: bold
+}
+#child4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch
+}
+
+#child5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch 
+}
+
+#compScore {
+    font-size: 8vw;
+    font-family: "Permanent Marker", cursive;
+}
+
+#score {
+    font-family: "Permanent Marker", cursive;
+    text-rendering: optimizeLegibility;
+    font-weight: bolder; 
+    font-size: 3.5vw
+}
+
+#playerScore {
+    font-size: 8vw;
+    font-family: "Permanent Marker", cursive;
+}
+
+.modal {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.modalcontent {
+    background-color:rgb(223, 208, 208);
+    text-align: center;
+    margin: 10% auto;
+    width: 24vw;
+    border-radius: .25em;
+    padding: 3rem;
+    box-shadow: 10px 10px #362629;
+    animation-name: modalopen;
+    animation-duration: 1s; 
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 
+desktop: 1200
+laptop: 1024
+tablet: 768
+phone: 480 
+*/
+
+@media screen and (max-width:480px){
+    #computerDeck {
+        width: 22vw;
+        height: 24vh;
+        background-image: url(Images/deckCover.jpeg);
+        background-size: cover;
+    }
+    #playerDeck {
+        width: 22vw;
+        height: 24vh;
+        background-image: url(Images/deckCover.jpeg);
+        background-size: cover;
+    }
+    #compCardDrawn {
+        width: 22vw;
+        height: 24vh;
+    }
+    #playerCardDrawn {
+        width: 22vw;
+        height: 24vh;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width:768px){
+    #computerDeck {
+        width: 22vw;
+        height: 24vh;
+        background-image: url(Images/deckCover.jpeg);
+        background-size: cover;
+    }
+    #playerDeck {
+        width: 22vw;
+        height: 24vh;
+        background-image: url(Images/deckCover.jpeg);
+        background-size: cover;
+    }
+    #compCardDrawn {
+        width: 22vw;
+        height: 24vh;
+    }
+    #playerCardDrawn {
+        width: 22vw;
+        height: 24vh;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:1024px){
+    #computerDeck {
+        width: 22vw;
+        height: 24vh;
+        background-image: url(Images/deckCover.jpeg);
+        background-size: cover;
+    }
+    #playerDeck {
+        width: 22vw;
+        height: 24vh;
+        background-image: url(Images/deckCover.jpeg);
+        background-size: cover;
+    }
+    #compCardDrawn {
+        width: 22vw;
+        height: 24vh;
+    }
+    #playerCardDrawn {
+        width: 22vw;
+        height: 24vh;
+    }
+}
