@@ -1,11 +1,3 @@
-//Ideas for Improvements/Addtl Features
-//multiple modals that pop up with educational info
-//giving the cards faces (using the silhouettes)
-//adding sound 
-//adding videos 
-
-
-
 //building blocks; the variables i'm going to need
 const cards = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10] 
 let playerHand = [];                                    
@@ -62,17 +54,17 @@ const drawCard = () => {
     console.log(compHand);
     console.log(compHand.length);
     if (compHand.length == 0 && compScore > playerScore) {
-        console.log("GAME OVER!! You Lose!");
+        // console.log("GAME OVER!! You Lose!");
         modal.style.display = "block";
         modalHeader.innerHTML = "GAME OVER!! You Lose!"
     }
     if (compHand.length == 0 && compScore < playerScore) {
-        console.log("YOU WIN!!!");
+        // console.log("YOU WIN!!!");
         modal.style.display = "block";
         modalHeader.innerHTML = "YOU WIN!!!"
     }
     if (compHand.length == 0 && compScore == playerScore) {
-        console.log("IT'S A TIE!!");
+        // console.log("IT'S A TIE!!");
         modal.style.display = "block";
         modalHeader.innerHTML = "IT'S A TIE!!"
     }
